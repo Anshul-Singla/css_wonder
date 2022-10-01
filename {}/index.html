@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        body>p{
+            margin: 50px;
+            font:500 50px sans-serif;
+            color: #fff;
+        }
+        p>span{
+            display: inline-block;
+        }
+        .close{
+            animation: sizeup 1s linear infinite ;
+
+        }
+        .open{
+            animation: sizeup 1s linear 0.5s infinite ;
+            /* animation-delay: 0.5s; */
+        }   
+        @keyframes sizeup {
+            0%,100%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.5);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <p><span class="open">{</span> <span class="close">}</span></p>
+</body>
+</html>
