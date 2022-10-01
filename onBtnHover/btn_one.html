@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button One</title>
+    <style>
+       #btn1_container {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .btn {
+        position: relative;
+        border: 1px solid #121212;
+        background: none;
+        transition: color 200ms;
+        width: 120px;
+        height: 40px;
+        margin: 20px;
+        font: 500 20px sans-serif;
+      }
+      .btn:is(:hover, :focus) {
+        color: pink;
+      }
+      .btn::after {
+        position: absolute;
+        content: " ";
+        inset: 0;
+        z-index: -1;
+        background-color: #121212;
+        transform-origin: left;
+        transform: scale(0);
+        transition: transform 500ms;
+      }
+      .btn:is(:hover, :focus)::after {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="btn1_container">
+        <div class="bn">
+          <button class="btn">Check Out</button>
+        </div>
+    </div>
+  </body>
+</html>

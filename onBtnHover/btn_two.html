@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #btn2_container {
+        height: 100px;
+        padding: 40px;
+        padding-bottom: 0;
+        margin-bottom: 10px;
+      }
+      .button {
+        text-decoration: none;
+        font-size: 25px;
+        color: #1fe8b6;
+        padding: 20px 50px;
+        border: solid 3px #1fe8b6;
+        position: relative;
+        margin-left: 50px;
+      }
+      .button::before,
+      .button::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: inherit;
+        transition: all 0.5s ease-in;
+      }
+      .button::before {
+        top: -15px;
+        left: -15px;
+        border-width: 3px 0 0 3px;
+      }
+      .button::after {
+        bottom: -15px;
+        right: -15px;
+        border-width: 0 3px 3px 0;
+      }
+      .button:hover::after,
+      .button:hover::before {
+        width: calc(100% + 27px);
+        height: calc(100% + 27px);
+      }
+    </style>
+    <title>Button</title>
+</head>
+<body>
+    <div id="btn2_container">
+        <a href="#" class="button">Learn more</a>
+      </div>
+</body>
+</html>
