@@ -5,11 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        
+        #card_container {
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        border: 2px solid black;
+        width: 250px;
+        height: 220px;
+        position: relative;
+        background-color: transparent;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .card:hover {
+        transform: rotateY(180deg);
+        cursor: pointer;
+      }
+      .front,
+      .back {
+        text-align: center;
+        height: 80%;
+        width: 80%;
+        background: #fff;
+        padding: 22px 28px 22px 22px;
+        position: absolute;
+        /* border-radius: 10px; */
+        backface-visibility: hidden;
+        display: table-row;
+        /* justify-content: center; */
+      }
+      .front {
+        background: rgb(180, 58, 170);
+        background: linear-gradient(
+          90deg,
+          rgba(180, 58, 170, 1) 0%,
+          rgba(200, 29, 253, 1) 35%,
+          rgba(252, 176, 69, 1) 100%
+        );
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .back {
+        transform: rotateY(180deg);
+        background: #fff;
+      }
     </style>
     <title>Insta Card</title>
 </head>
 <body>
-    
+    <div id="card_container">
+        <div class="card">
+          <div class="front">
+            <img src="./download.jpg" alt="" />
+            <h2>@MONSTER</h2>
+          </div>
+          <div class="back">
+            <img src="./DEF-3182-Mail.jpg" alt="" />
+            <h2>ANSHUL SINGLA</h2>
+            <p>@MONSTER</p>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
