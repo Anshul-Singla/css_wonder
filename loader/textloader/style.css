@@ -1,0 +1,37 @@
+/* first */
+h2 {
+    position: relative;
+    font-size: 5em;
+    color: #c7ff6e;
+    text-transform: uppercase;
+    border-bottom: 10px solid #c7ff6e;
+    width: 500px;
+  }
+  h2::before {
+    content: attr(loading-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    color: #b0a8e2;
+    overflow: hidden;
+    border-bottom: 10px solid #b0a8e2;
+    animation: loading 2s linear infinite;
+  }
+  @keyframes loading {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  /* second */
+  .second {
+    background: linear-gradient(90deg, #72ace9, #5558b6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font: 50px sans-serif;
+  }
+  

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .circularLoaderContainer{
+            background-color: #000;
+            width: 100vw;
+            height: 20vh;
+            padding: 20px 0;
+            position: relative;
+        }
+        .circularLoader1{
+            margin: 0 auto;
+            border-top: 5px solid red;
+            /* border-bottom: 5px solid red; */
+            width: 100px;
+            height: 100px;
+            /* background-color: #fff; */
+            border-radius: 50%;
+            /* border-top: #000; */
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            animation: clockWise-loader 250ms linear infinite;
+        }
+        .circularLoader2{
+            margin: 0 auto;
+            /* border-top: 5px solid red; */
+            border-bottom: 5px solid teal;
+            width: 100px;
+            height: 100px;
+            /* background-color: #fff; */
+            border-radius: 50%;
+            /* border-top: #000; */
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            animation: antiClockWise-loader 250ms linear  infinite;
+        }
+        @keyframes clockWise-loader {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes antiClockWise-loader {
+            100%{
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circularLoaderContainer">
+        <div class="circularLoader1"></div>
+        <div class="circularLoader2"></div>
+    </div>
+</body>
+</html>
