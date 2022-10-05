@@ -5,7 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
+        .reflected{
+            display: inline-block;
+            width: max-content;
+            padding: 0 10px;
+        }
+        .reflected > *{
+            font-size: 5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .reflected > :last-child {
+            transform: rotate(180deg) translate(28px);
+            mask-image:linear-gradient(transparent 50% , white 90%) ;
+            -webkit-mask-image: linear-gradient(transparent 50% , white 90%) ;
+            opacity: 0.72;
+        }
     </style>
     <title>Refletion Text</title>
 </head>
