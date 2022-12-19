@@ -19,7 +19,7 @@
     display: flex;
     gap: 1rem;
     border: 1px solid teal;
-    width: 50%;
+    width: 350px;
     border-radius: 1rem;
 }
 .box>img{
@@ -27,7 +27,7 @@
 }
 .text>*{
     margin: 5px 0;
-    transition: all 1000ms ease-in-out;
+    /* transition: all 1000ms ease-in-out; */
 }
 .text>p{
     display: none;
@@ -48,6 +48,6 @@
 .desiredBoxDesign>.text>p{
     color: #2e4497; 
 }
-.desiredBoxDesign:hover .text>p{
+.desiredBoxDesign .text>p{
     display: block;
 }
