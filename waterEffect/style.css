@@ -1,0 +1,39 @@
+body {
+  background-color: #000;
+}
+h1 {
+  width: fit-content;
+  margin: 0 auto;
+  color: #fff;
+  font: 35px sans-serif;
+}
+#bubble-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border: 2px solid #fff;
+}
+#bubble {
+  height: max(300px, 30vh);
+  width: max(300px, 30vw);
+  background-color: rgb(33, 150, 243);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top:90% ;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  from,
+  to {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 20%);
+  }
+}
