@@ -16,14 +16,14 @@ h1 {
   pointer-events: none;
   border: 2px solid #fff;
 }
-#bubble {
+.bubble {
   height: max(300px, 30vh);
   width: max(300px, 30vw);
   background-color: rgb(33, 150, 243);
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  top:90% ;
+  top:100% ;
   animation: wave 2s ease-in-out infinite;
 }
 
@@ -34,6 +34,6 @@ h1 {
   }
 
   50% {
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -20%);
   }
 }
